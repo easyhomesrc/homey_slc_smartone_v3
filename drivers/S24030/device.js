@@ -16,13 +16,13 @@ const destructConstProps = function ({
 
 const HzcThermostatCluster = require('../../lib/HzcThermostatCluster')
 const HzcThermostatUserInterfaceConfigurationCluster =
-    require('../../lib/HzcThermostatUserInterfaceConfigurationCluster') 
+    require('../../lib/HzcThermostatUserInterfaceConfigurationCluster')
 Cluster.addCluster(HzcThermostatCluster)
-Cluster.addCluster(HzcThermostatUserInterfaceConfigurationCluster) 
+Cluster.addCluster(HzcThermostatUserInterfaceConfigurationCluster)
 
 CLUSTER['THERMOSTAT_USER_INTERFACE_CONFIGURATION'] =
-    destructConstProps(HzcThermostatUserInterfaceConfigurationCluster) 
- 
+    destructConstProps(HzcThermostatUserInterfaceConfigurationCluster)
+
 
 const getInt16 = function (number) {
     const int16 = new Int16Array(1)
@@ -45,7 +45,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
     async onNodeInit({ zclNode, node }) {
         super.onNodeInit({ zclNode: zclNode, node: node })
         //this.enableDebug();
-        //this.printNode();   
+        //this.printNode();
 
         this.isOnline = 0
         this.meter_multiplier = 0.001;
@@ -109,7 +109,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
     async _initUiModule() {
 
         //this.onDeleted()
-        //super.onDeleted() 
+        //super.onDeleted()
 
         if (this.getStoreValue('regulator_mode_changed') === true) {
             await this.showMessage(TIP_CHANGED)
@@ -125,7 +125,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
             //if (!this.hasCapability('t7e_zg_sensor_mode')){ await  this.addCapability('t7e_zg_sensor_mode') }
             if (!this.hasCapability('t7e_zg_window_state')) { await this.addCapability('t7e_zg_window_state'); }
             //if (!this.hasCapability('t7e_zg_fault')) { await this.addCapability('t7e_zg_fault') }
-            //if (!this.hasCapability('t7e_zg_datetime')) { await this.addCapability('t7e_zg_datetime') } 
+            //if (!this.hasCapability('t7e_zg_datetime')) { await this.addCapability('t7e_zg_datetime') }
             if (this.hasCapability('t7e_zg_datetime')) { await this.removeCapability('t7e_zg_datetime') }
 
             if (!this.hasCapability('child_lock')) { await this.addCapability("child_lock"); }
@@ -205,7 +205,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
         appkit.frost.init(this)
         appkit.sensor_mode.init(this)
         appkit.fault.init(this)
- 
+
 
         await this._onHandlerReport()
 
@@ -215,7 +215,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
         await this.setAvailable()
         await this.unsetWarning()
 
-        //this._getAttributes();   
+        //this._getAttributes();
         this._loopTipInfo()
 
 
@@ -225,11 +225,11 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
 
     async showMessage(msg) {
         await this.unsetWarning();
-        await this.setWarning(msg).catch(this.error); 
+        await this.setWarning(msg).catch(this.error);
     }
 
     //==========================================================================================
-    //        Report handler  
+    //        Report handler
     async _onHandlerReport() {
 
         this.onoffCluster().on('attr.onOff', async value => {
@@ -263,7 +263,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
         this.thermostatCluster().on('attr.syncTimeReq', async value => {
             this.log('+++report syncTimeReq: ', value)
             if (value === true || value === 1) {
-                //appkit.datetime.setDatetime(this) 
+                //appkit.datetime.setDatetime(this)
                 this.setDatetime()
             }
 
@@ -283,7 +283,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
                 }
             }
 
-            //this.setCapabilityValue('t7e_zg_fault', thefault) 
+            //this.setCapabilityValue('t7e_zg_fault', thefault)
         })
 
 
@@ -328,7 +328,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
 
 
     //==========================================================================================
-    //  Instances 
+    //  Instances
 
     thermostatCluster() { return this.zclNode.endpoints[1].clusters.thermostat }
     //onoffCluster() { return this.zclNode.endpoints[1].clusters.thermostatOnoff }
@@ -358,7 +358,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
         this.registerCapabilityListener('onoff', async isOn => {
             this.log('========== onoff toggle: ', isOn)
 
-            //init 
+            //init
             let initing = this.getStoreValue('app_initing') || false
 
             let modeChanged = this.getStoreValue('regulator_mode_changed')
@@ -540,7 +540,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
             let o = appkit[element];
             if (o != undefined) {
                 if (o['setConfig']) {
-                    o.setConfig(this, newSettings[element]);
+                    o.setConfig(this, newSettings[element]).catch(this.error);
                 }
             }
         })
@@ -576,13 +576,13 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
                 if (value.hasOwnProperty('systemMode')) {
                     let mode = value.systemMode
                     this._setModeUI(mode)
-                    //this.setCapabilityValue('onoff', mode !== 'off') 
+                    //this.setCapabilityValue('onoff', mode !== 'off')
                 }
 
                 if (value.hasOwnProperty('thermostatRunningMode')) {
                     let mode = value.thermostatRunningMode
                     this._setModeUI(mode)
-                    //this.setCapabilityValue('onoff', mode !== 'off') 
+                    //this.setCapabilityValue('onoff', mode !== 'off')
                 }
             })
         }
@@ -692,7 +692,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
             })
         }
 
-        //others 
+        //others
         await this.thermostatCluster().
             readAttributes('windowState', 'backlight', 'thermostatProgramOperModel', 'regulator', 'backlightSwitch', 'sensorMode').
             then(value => {
@@ -746,7 +746,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
         })
 
 
-        //kwh 
+        //kwh
         try {
             const {
                 multiplier, divisor, currentSummationDelivered
@@ -877,10 +877,10 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
             if (modeChanged === true) {
                 //this.log('--------mode changed: ', modeChanged, TIP_CHANGED)
                 this.unsetWarning();
-                this.showMessage(TIP_CHANGED) 
+                this.showMessage(TIP_CHANGED)
 
-            } else {  
-                await this._getAttributes() 
+            } else {
+                await this._getAttributes()
             }
 
             //this._getLastStatus()
@@ -890,7 +890,7 @@ class thermostat_t5_zg_thermostat extends ZigBeeDevice {
 
 
             //根据获取当前温度参数计数（电源关闭后，无参数返回）
-            this.isOnline += 1 
+            this.isOnline += 1
 
 
         } catch (error) {
