@@ -73,5 +73,8 @@
   },
   "2.2.11": {
     "en": "Add support for S24029, S24030."
+  },
+  "2.2.12": {
+    "en": "Update the images of S24013, S24015."
   }
 }
