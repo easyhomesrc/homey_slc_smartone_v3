@@ -1,0 +1,37 @@
+{
+  "title": {
+    "en": "Move hue"
+  },
+  "titleFormatted": {
+    "en": "Move hue [[move_mode]], rate [[rate]]"
+  },
+  "duration": false,
+  "args": [
+    {
+      "name": "move_mode",
+      "type": "number",
+      "min": 0,
+      "max": 3,
+      "step": 1,
+      "title": {
+        "en": "Move mode, { 0 } means stop, { 1 } means up, { 3 } means down, other values are invalid."
+      }
+    },
+    {
+      "name": "rate",
+      "title": "Rate",
+      "type": "range",
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": "%",
+      "labelMultiplier": 100,
+      "labelDecimals": 0
+    },
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=S24018_RGBCCT|S24022_RGB"
+    }
+  ]
+}

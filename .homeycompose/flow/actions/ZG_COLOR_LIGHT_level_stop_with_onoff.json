@@ -1,0 +1,13 @@
+{
+  "title": {
+    "en": "Stop level (with On/Off)"
+  },
+  "duration": false,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=S24018_RGBCCT|S24022_RGB"
+    }
+  ]
+}

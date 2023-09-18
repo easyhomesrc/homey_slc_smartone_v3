@@ -1,0 +1,29 @@
+{
+  "title": {
+    "en": "Recall scene"
+  },
+  "titleFormatted": {
+    "en": "Group [[group_id]] recall scene [[scene_id]]"
+  },
+  "args": [
+    {
+      "name": "group_id",
+      "type": "number",
+      "title": {
+        "en": "Group ID, default { 0 }"
+      }
+    },
+    {
+      "name": "scene_id",
+      "type": "number",
+      "title": {
+        "en": "Scene ID"
+      }
+    },
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=S24018_RGBCCT|S24022_RGB"
+    }
+  ]
+}

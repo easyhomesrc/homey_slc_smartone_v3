@@ -1,0 +1,80 @@
+{
+  "id": "S24022_RGB",
+  "name": {
+    "en": "S24022 RGB"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_saturation",
+    "light_temperature",
+    "light_mode"
+  ],
+  "capabilitiesOptions": {
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_hue": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_saturation": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_temperature": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "onoff": {
+      "setOnDim": false
+    }
+  },
+  "platforms": ["local", "cloud"],
+  "connectivity": ["zigbee"],
+  "zigbee": {
+    "manufacturerName": [
+      "The Light Group AS",
+      "THE LIGHT GROUP AS",
+      "the light group as",
+      "The light group AS",
+      "The Light Croup AS"
+    ],
+    "productId": [
+      "HK-ZD-RGB-A",
+      "HK-ZD-RGBCCT-A"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          6,
+          8,
+          768
+        ],
+        "bindings": [
+          6,
+          8
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "/drivers/S24022_RGB/assets/learnmode.svg",
+      "instruction": {
+        "en": "Quickly press the Reset button on the device 5 times or repeatedly power OFF/ON 5 times to put the device into pair mode. The device slowly flashing means the device is in pair mode. The pair mode generally lasts for 15 seconds after each power on. Re-power the device to enter pair mode again."
+      }
+    }
+  },
+  "images": {
+    "large": "/drivers/S24022_RGB/assets/images/large.png",
+    "small": "/drivers/S24022_RGB/assets/images/small.png"
+  },
+  "settings": [
+  ]
+}

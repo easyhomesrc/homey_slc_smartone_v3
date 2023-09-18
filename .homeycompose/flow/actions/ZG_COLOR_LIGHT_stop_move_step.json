@@ -1,0 +1,16 @@
+{
+  "title": {
+    "en": "Stop move step"
+  },
+  "hint": {
+    "en": "The stop move step command is provided to allow Move and Step commands to be stopped."
+  },
+  "duration": false,
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=S24018_RGBCCT|S24022_RGB"
+    }
+  ]
+}
