@@ -82,5 +82,8 @@
   },
   "2.2.14": {
     "en": "Added support for  S57001B and  S57003B."
+  },
+  "2.2.15": {
+    "en": "Added support for S57001B and S57003B."
   }
 }
