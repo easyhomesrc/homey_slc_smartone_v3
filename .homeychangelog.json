@@ -85,5 +85,8 @@
   },
   "2.2.15": {
     "en": "Added support for S57001B and S57003B."
+  },
+  "2.2.16": {
+    "en": "add new trigger cards for key held down and released events for group control"
   }
 }
