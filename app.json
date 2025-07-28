@@ -45,6 +45,2050 @@
   "source": "https://github.com/easyhomesrc/homey_slc_smartone_v3.git",
   "support": "https://github.com/easyhomesrc/homey_slc_smartone_v3.git",
   "flow": {
+    "triggers": [
+      {
+        "title": {
+          "en": "Off (Key held down)"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] off (Key held down)"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=S57003"
+          },
+          {
+            "name": "group",
+            "title": {
+              "en": "Group"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "off_key_held_down_g4"
+      },
+      {
+        "title": {
+          "en": "Off (Key released)"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] off (Key released)"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=S57003"
+          },
+          {
+            "name": "group",
+            "title": {
+              "en": "Group"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "off_key_released_g4"
+      },
+      {
+        "title": {
+          "en": "On (Key held down)"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] on (Key held down)"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=S57003"
+          },
+          {
+            "name": "group",
+            "title": {
+              "en": "Group"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "on_key_held_down_g4"
+      },
+      {
+        "title": {
+          "en": "On (Key released)"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] on (Key released)"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=S57003"
+          },
+          {
+            "name": "group",
+            "title": {
+              "en": "Group"
+            },
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              }
+            ]
+          }
+        ],
+        "id": "on_key_released_g4"
+      },
+      {
+        "id": "ZG2833K2_EU07_on",
+        "title": {
+          "en": "Turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57001"
+          }
+        ]
+      },
+      {
+        "id": "ZG2833K2_EU07_off",
+        "title": {
+          "en": "Turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57001"
+          }
+        ]
+      },
+      {
+        "id": "ZG2833K2_EU07_level_move_with_onoff",
+        "title": {
+          "en": "Level moved"
+        },
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57001"
+          }
+        ]
+      },
+      {
+        "id": "ZG2833K2_EU07_level_stop_with_onoff",
+        "title": {
+          "en": "Level stopped"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57001"
+          }
+        ]
+      },
+      {
+        "id": "ZG2833K8_EU05_on",
+        "title": {
+          "en": "Turned on"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57003"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZG2833K8_EU05_off",
+        "title": {
+          "en": "Turned off"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57003"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZG2833K8_EU05_level_move_with_onoff",
+        "title": {
+          "en": "Level moved"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] move level"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57003"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2833K8_EU05_level_stop_with_onoff",
+        "title": {
+          "en": "Level stopped"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] stop level"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57003"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_002_on",
+        "title": {
+          "en": "Turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57005"
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_002_off",
+        "title": {
+          "en": "Turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57005"
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_002_level_step_with_onoff",
+        "title": {
+          "en": "Level stepped"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57005"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "mode",
+            "type": "number",
+            "title": {
+              "en": "Mode"
+            }
+          },
+          {
+            "name": "step_size",
+            "type": "number",
+            "title": {
+              "en": "Step size"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_002_level_move_with_onoff",
+        "title": {
+          "en": "Level moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57005"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_002_level_stop_with_onoff",
+        "title": {
+          "en": "Level stopped"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57005"
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_002_move_to_color_temperature",
+        "title": {
+          "en": "Color temperature moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57005"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "color_temperature",
+            "type": "number",
+            "title": {
+              "en": "Color temperature"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_002_move_color_temperature",
+        "title": {
+          "en": "Color temperature moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57005"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_002_stop_move_step",
+        "title": {
+          "en": "Move step stopped"
+        },
+        "hint": {
+          "en": "The stop move step command is provided to allow Move and Step commands to be stopped."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57005"
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_on",
+        "title": {
+          "en": "Turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_off",
+        "title": {
+          "en": "Turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_level_step_with_onoff",
+        "title": {
+          "en": "Level stepped"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "mode",
+            "type": "number",
+            "title": {
+              "en": "Mode"
+            }
+          },
+          {
+            "name": "step_size",
+            "type": "number",
+            "title": {
+              "en": "Step size"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_level_move_with_onoff",
+        "title": {
+          "en": "Level moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_level_stop_with_onoff",
+        "title": {
+          "en": "Level stopped"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_move_to_color_temperature",
+        "title": {
+          "en": "Color temperature moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "color_temperature",
+            "type": "number",
+            "title": {
+              "en": "Color temperature"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_move_color_temperature",
+        "title": {
+          "en": "Color temperature moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_stop_move_step",
+        "title": {
+          "en": "Move step stopped"
+        },
+        "hint": {
+          "en": "The stop move step command is provided to allow Move and Step commands to be stopped."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_move_to_color",
+        "title": {
+          "en": "Color XY moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "color_x",
+            "type": "number",
+            "title": {
+              "en": "Color X"
+            }
+          },
+          {
+            "name": "color_y",
+            "type": "number",
+            "title": {
+              "en": "Color Y"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_005_move_hue",
+        "title": {
+          "en": "Hue moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57006"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_014_on",
+        "title": {
+          "en": "Turned on"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57007"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_014_off",
+        "title": {
+          "en": "Turned off"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57007"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_014_recall_scene",
+        "title": {
+          "en": "Scene recalled"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] recall scene"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57007"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "group_id",
+            "type": "number",
+            "title": {
+              "en": "Group ID"
+            }
+          },
+          {
+            "name": "scene_id",
+            "type": "number",
+            "title": {
+              "en": "Scene ID"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_014_store_scene",
+        "title": {
+          "en": "Scene stored"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] store scene"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57007"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "group_id",
+            "type": "number",
+            "title": {
+              "en": "Group ID"
+            }
+          },
+          {
+            "name": "scene_id",
+            "type": "number",
+            "title": {
+              "en": "Scene ID"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_014_level_move_with_onoff",
+        "title": {
+          "en": "Level moved"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] move level"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57007"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZGRC_KEY_014_level_stop_with_onoff",
+        "title": {
+          "en": "Level stopped"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] stop level"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57007"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_on",
+        "title": {
+          "en": "Turned on"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_off",
+        "title": {
+          "en": "Turned off"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_move_to_color",
+        "title": {
+          "en": "Color XY moved"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] color moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "color_x",
+            "type": "number",
+            "title": {
+              "en": "Color X"
+            }
+          },
+          {
+            "name": "color_y",
+            "type": "number",
+            "title": {
+              "en": "Color Y"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_recall_scene",
+        "title": {
+          "en": "Scene recalled"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] recall scene"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "group_id",
+            "type": "number",
+            "title": {
+              "en": "Group ID"
+            }
+          },
+          {
+            "name": "scene_id",
+            "type": "number",
+            "title": {
+              "en": "Scene ID"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_store_scene",
+        "title": {
+          "en": "Scene stored"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] store scene"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "group_id",
+            "type": "number",
+            "title": {
+              "en": "Group ID"
+            }
+          },
+          {
+            "name": "scene_id",
+            "type": "number",
+            "title": {
+              "en": "Scene ID"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_level_step_with_onoff",
+        "title": {
+          "en": "Level stepped"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] step level"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "mode",
+            "type": "number",
+            "title": {
+              "en": "Mode"
+            }
+          },
+          {
+            "name": "step_size",
+            "type": "number",
+            "title": {
+              "en": "Step size"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_level_move_with_onoff",
+        "title": {
+          "en": "Level moved"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] move level"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_level_stop_with_onoff",
+        "title": {
+          "en": "Level stopped"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] stop level"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_move_to_color_temperature",
+        "title": {
+          "en": "Color temperature moved"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] color temperature moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "color_temperature",
+            "type": "number",
+            "title": {
+              "en": "Color temperature"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_move_color_temperature",
+        "title": {
+          "en": "Color temperature moved"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] move color temperature"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_stop_move_step",
+        "title": {
+          "en": "Move step stopped"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] stop move step"
+        },
+        "hint": {
+          "en": "The stop move step command is provided to allow Move and Step commands to be stopped."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ZG2819S_RGBW_move_hue",
+        "title": {
+          "en": "Hue moved"
+        },
+        "titleFormatted": {
+          "en": "Group [[group]] move hue"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57009"
+          },
+          {
+            "name": "group",
+            "type": "dropdown",
+            "title": {
+              "en": "Group"
+            },
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Group 1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Group 2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Group 3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "Group 4"
+                }
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "name": "move_mode",
+            "type": "number",
+            "title": {
+              "en": "Move mode"
+            }
+          },
+          {
+            "name": "rate",
+            "type": "number",
+            "title": {
+              "en": "Rate"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2835_on",
+        "title": {
+          "en": "Turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57018"
+          }
+        ]
+      },
+      {
+        "id": "ZG2835_off",
+        "title": {
+          "en": "Turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57018"
+          }
+        ]
+      },
+      {
+        "id": "ZG2835_move_to_level_with_onoff",
+        "title": {
+          "en": "Level moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57018"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "level",
+            "type": "number",
+            "title": {
+              "en": "Level"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2835_move_to_color_temperature",
+        "title": {
+          "en": "Color temperature moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57018"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "color_temperature",
+            "type": "number",
+            "title": {
+              "en": "Color temperature"
+            }
+          },
+          {
+            "name": "transition_time",
+            "type": "number",
+            "title": {
+              "en": "Transition time"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ZG2835_move_to_hue",
+        "title": {
+          "en": "Hue moved"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=S57018"
+          }
+        ],
+        "tokens": [
+          {
+            "name": "hue",
+            "type": "number",
+            "title": {
+              "en": "Hue"
+            }
+          }
+        ]
+      }
+    ],
     "actions": [
       {
         "title": {
@@ -3322,1854 +5366,6 @@
           }
         ]
       }
-    ],
-    "triggers": [
-      {
-        "id": "ZG2833K2_EU07_on",
-        "title": {
-          "en": "Turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57001"
-          }
-        ]
-      },
-      {
-        "id": "ZG2833K2_EU07_off",
-        "title": {
-          "en": "Turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57001"
-          }
-        ]
-      },
-      {
-        "id": "ZG2833K2_EU07_level_move_with_onoff",
-        "title": {
-          "en": "Level moved"
-        },
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57001"
-          }
-        ]
-      },
-      {
-        "id": "ZG2833K2_EU07_level_stop_with_onoff",
-        "title": {
-          "en": "Level stopped"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57001"
-          }
-        ]
-      },
-      {
-        "id": "ZG2833K8_EU05_on",
-        "title": {
-          "en": "Turned on"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57003"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZG2833K8_EU05_off",
-        "title": {
-          "en": "Turned off"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57003"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZG2833K8_EU05_level_move_with_onoff",
-        "title": {
-          "en": "Level moved"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] move level"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57003"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2833K8_EU05_level_stop_with_onoff",
-        "title": {
-          "en": "Level stopped"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] stop level"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57003"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_002_on",
-        "title": {
-          "en": "Turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57005"
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_002_off",
-        "title": {
-          "en": "Turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57005"
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_002_level_step_with_onoff",
-        "title": {
-          "en": "Level stepped"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57005"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "mode",
-            "type": "number",
-            "title": {
-              "en": "Mode"
-            }
-          },
-          {
-            "name": "step_size",
-            "type": "number",
-            "title": {
-              "en": "Step size"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_002_level_move_with_onoff",
-        "title": {
-          "en": "Level moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57005"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_002_level_stop_with_onoff",
-        "title": {
-          "en": "Level stopped"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57005"
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_002_move_to_color_temperature",
-        "title": {
-          "en": "Color temperature moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57005"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "color_temperature",
-            "type": "number",
-            "title": {
-              "en": "Color temperature"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_002_move_color_temperature",
-        "title": {
-          "en": "Color temperature moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57005"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_002_stop_move_step",
-        "title": {
-          "en": "Move step stopped"
-        },
-        "hint": {
-          "en": "The stop move step command is provided to allow Move and Step commands to be stopped."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57005"
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_on",
-        "title": {
-          "en": "Turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_off",
-        "title": {
-          "en": "Turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_level_step_with_onoff",
-        "title": {
-          "en": "Level stepped"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "mode",
-            "type": "number",
-            "title": {
-              "en": "Mode"
-            }
-          },
-          {
-            "name": "step_size",
-            "type": "number",
-            "title": {
-              "en": "Step size"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_level_move_with_onoff",
-        "title": {
-          "en": "Level moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_level_stop_with_onoff",
-        "title": {
-          "en": "Level stopped"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_move_to_color_temperature",
-        "title": {
-          "en": "Color temperature moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "color_temperature",
-            "type": "number",
-            "title": {
-              "en": "Color temperature"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_move_color_temperature",
-        "title": {
-          "en": "Color temperature moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_stop_move_step",
-        "title": {
-          "en": "Move step stopped"
-        },
-        "hint": {
-          "en": "The stop move step command is provided to allow Move and Step commands to be stopped."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_move_to_color",
-        "title": {
-          "en": "Color XY moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "color_x",
-            "type": "number",
-            "title": {
-              "en": "Color X"
-            }
-          },
-          {
-            "name": "color_y",
-            "type": "number",
-            "title": {
-              "en": "Color Y"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_005_move_hue",
-        "title": {
-          "en": "Hue moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57006"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_014_on",
-        "title": {
-          "en": "Turned on"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57007"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_014_off",
-        "title": {
-          "en": "Turned off"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57007"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_014_recall_scene",
-        "title": {
-          "en": "Scene recalled"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] recall scene"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57007"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "group_id",
-            "type": "number",
-            "title": {
-              "en": "Group ID"
-            }
-          },
-          {
-            "name": "scene_id",
-            "type": "number",
-            "title": {
-              "en": "Scene ID"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_014_store_scene",
-        "title": {
-          "en": "Scene stored"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] store scene"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57007"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "group_id",
-            "type": "number",
-            "title": {
-              "en": "Group ID"
-            }
-          },
-          {
-            "name": "scene_id",
-            "type": "number",
-            "title": {
-              "en": "Scene ID"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_014_level_move_with_onoff",
-        "title": {
-          "en": "Level moved"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] move level"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57007"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZGRC_KEY_014_level_stop_with_onoff",
-        "title": {
-          "en": "Level stopped"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] stop level"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57007"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_on",
-        "title": {
-          "en": "Turned on"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_off",
-        "title": {
-          "en": "Turned off"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_move_to_color",
-        "title": {
-          "en": "Color XY moved"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] color moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "color_x",
-            "type": "number",
-            "title": {
-              "en": "Color X"
-            }
-          },
-          {
-            "name": "color_y",
-            "type": "number",
-            "title": {
-              "en": "Color Y"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_recall_scene",
-        "title": {
-          "en": "Scene recalled"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] recall scene"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "group_id",
-            "type": "number",
-            "title": {
-              "en": "Group ID"
-            }
-          },
-          {
-            "name": "scene_id",
-            "type": "number",
-            "title": {
-              "en": "Scene ID"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_store_scene",
-        "title": {
-          "en": "Scene stored"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] store scene"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "group_id",
-            "type": "number",
-            "title": {
-              "en": "Group ID"
-            }
-          },
-          {
-            "name": "scene_id",
-            "type": "number",
-            "title": {
-              "en": "Scene ID"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_level_step_with_onoff",
-        "title": {
-          "en": "Level stepped"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] step level"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "mode",
-            "type": "number",
-            "title": {
-              "en": "Mode"
-            }
-          },
-          {
-            "name": "step_size",
-            "type": "number",
-            "title": {
-              "en": "Step size"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_level_move_with_onoff",
-        "title": {
-          "en": "Level moved"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] move level"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_level_stop_with_onoff",
-        "title": {
-          "en": "Level stopped"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] stop level"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_move_to_color_temperature",
-        "title": {
-          "en": "Color temperature moved"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] color temperature moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "color_temperature",
-            "type": "number",
-            "title": {
-              "en": "Color temperature"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_move_color_temperature",
-        "title": {
-          "en": "Color temperature moved"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] move color temperature"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_stop_move_step",
-        "title": {
-          "en": "Move step stopped"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] stop move step"
-        },
-        "hint": {
-          "en": "The stop move step command is provided to allow Move and Step commands to be stopped."
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ZG2819S_RGBW_move_hue",
-        "title": {
-          "en": "Hue moved"
-        },
-        "titleFormatted": {
-          "en": "Group [[group]] move hue"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57009"
-          },
-          {
-            "name": "group",
-            "type": "dropdown",
-            "title": {
-              "en": "Group"
-            },
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "Group 1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "Group 2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "Group 3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "Group 4"
-                }
-              }
-            ]
-          }
-        ],
-        "tokens": [
-          {
-            "name": "move_mode",
-            "type": "number",
-            "title": {
-              "en": "Move mode"
-            }
-          },
-          {
-            "name": "rate",
-            "type": "number",
-            "title": {
-              "en": "Rate"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2835_on",
-        "title": {
-          "en": "Turned on"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57018"
-          }
-        ]
-      },
-      {
-        "id": "ZG2835_off",
-        "title": {
-          "en": "Turned off"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57018"
-          }
-        ]
-      },
-      {
-        "id": "ZG2835_move_to_level_with_onoff",
-        "title": {
-          "en": "Level moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57018"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "level",
-            "type": "number",
-            "title": {
-              "en": "Level"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2835_move_to_color_temperature",
-        "title": {
-          "en": "Color temperature moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57018"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "color_temperature",
-            "type": "number",
-            "title": {
-              "en": "Color temperature"
-            }
-          },
-          {
-            "name": "transition_time",
-            "type": "number",
-            "title": {
-              "en": "Transition time"
-            }
-          }
-        ]
-      },
-      {
-        "id": "ZG2835_move_to_hue",
-        "title": {
-          "en": "Hue moved"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=S57018"
-          }
-        ],
-        "tokens": [
-          {
-            "name": "hue",
-            "type": "number",
-            "title": {
-              "en": "Hue"
-            }
-          }
-        ]
-      }
     ]
   },
   "drivers": [
@@ -7140,7 +7336,8 @@
           "The Light Group AS",
           "THE LIGHT GROUP AS",
           "the light group as",
-          "The light group AS"
+          "The light group AS",
+          "Sunricher"
         ],
         "productId": [
           "ZG2833K8_EU05",
