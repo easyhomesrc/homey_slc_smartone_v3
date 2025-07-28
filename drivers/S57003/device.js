@@ -35,7 +35,7 @@ class RemoteControl extends ZigBeeRemoteControl {
     })
   }
 
-  _onOffCommandHandler (type, endpoint) {
+  _onOffCommandHandler(type, endpoint) {
 
     this.log(
       `_onOffCommandHandler => ${type}, ${endpoint}`)
@@ -45,29 +45,54 @@ class RemoteControl extends ZigBeeRemoteControl {
     this.driver.getDeviceTriggerCard(type).trigger(this, tokens, state)
   }
 
-  _onLevelMoveWithOnOff ({ moveMode, rate }, endpoint) {
+  _onLevelStopWithOnOff(endpoint) {
+    this.log(`_onLevelStopWithOnOff, ${endpoint}, ${this.heldDownKey}`)
+    const state = { group: endpoint }
 
-    this.log(
-      `_onLevelMoveWithOnOff ${moveMode} ${rate}, ${endpoint}`)
+    const cardName = 'ZG2833K8_EU05_level_stop_with_onoff'
+    this.driver.getDeviceTriggerCard(cardName)
+      .trigger(this, {}, state)
+      .catch(this.error)
 
-    const tokens = {
-      'move_mode': SrUtils.getMoveLevelMoveModeToken(moveMode),
-      'rate': SrUtils.getMoveLevelRateToken(rate),
+    if (this.heldDownKey) {
+      const cardName = this.heldDownKey === 'on'
+        ? 'on_key_released_g4'
+        : 'off_key_released_g4';
+
+      this.heldDownKey = null
+
+      this.driver.getDeviceTriggerCard(cardName)
+        .trigger(this, {}, state)
+        .catch(this.error)
     }
-    const state = { 'group': endpoint }
-    this.driver.getDeviceTriggerCard('ZG2833K8_EU05_level_move_with_onoff').
-      trigger(this, tokens, state)
   }
 
-  _onLevelStopWithOnOff (endpoint) {
+  _onLevelMoveWithOnOff({ moveMode, rate }, endpoint) {
+    this.log(`_onLevelMoveWithOnOff ${moveMode} ${rate}, ${endpoint}`)
 
-    this.log(
-      `_onLevelStopWithOnOff, ${endpoint}`)
+    const tokens = {
+      move_mode: SrUtils.getMoveLevelMoveModeToken(moveMode),
+      rate: SrUtils.getMoveLevelRateToken(rate)
+    }
+    const state = { group: endpoint }
 
-    const tokens = {}
-    const state = { 'group': endpoint }
-    this.driver.getDeviceTriggerCard('ZG2833K8_EU05_level_stop_with_onoff').
-      trigger(this, tokens, state)
+    const cardName = 'ZG2833K8_EU05_level_move_with_onoff'
+    this.driver.getDeviceTriggerCard(cardName)
+      .trigger(this, tokens, state)
+      .catch(this.error)
+
+    if (moveMode === 'up') {
+      this.heldDownKey = 'on'
+      this.driver.getDeviceTriggerCard('on_key_held_down_g4')
+        .trigger(this, {}, state)
+        .catch(this.error)
+
+    } else if (moveMode === 'down') {
+      this.heldDownKey = 'off'
+      this.driver.getDeviceTriggerCard('off_key_held_down_g4')
+        .trigger(this, {}, state)
+        .catch(this.error)
+    }
   }
 
 }

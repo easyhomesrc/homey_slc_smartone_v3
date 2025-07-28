@@ -7,6 +7,7 @@ class MyApp extends Homey.App {
   onInit () {
     this.log('MyApp is running...')
 
+    this._setupTriggers()
     this._setupZigbeeDimFlowActionCards()
     this._setupZigbeeCctFlowActionCards()
     this._setupZigbeeRgbFlowActionCards()
@@ -24,6 +25,21 @@ class MyApp extends Homey.App {
     const card = this.homey.flow.getActionCard(flowId)
     if (card) return card
     throw Error(`No ${flowId} action card found`)
+  }
+
+  _setupTriggers() {
+    const groupTriggers = [
+      'on_key_held_down_g4',
+      'on_key_released_g4',
+      'off_key_held_down_g4',
+      'off_key_released_g4',
+    ];
+    groupTriggers.forEach((triggerId) => {
+      this.homey.flow.getDeviceTriggerCard(triggerId).
+        registerRunListener(async (args, state) => {
+          return args.group === state.group
+        })
+    })
   }
 
   _setupZigbeeDimFlowActionCards() {

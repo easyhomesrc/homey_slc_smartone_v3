@@ -1,0 +1,48 @@
+{
+    "title": {
+        "en": "Off (Key released)"
+    },
+    "titleFormatted": {
+        "en": "Group [[group]] off (Key released)"
+    },
+    "args": [
+        {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=S57003"
+        },
+        {
+            "name": "group",
+            "title": {
+                "en": "Group"
+            },
+            "type": "dropdown",
+            "values": [
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "1"
+                    }
+                },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "2"
+                    }
+                },
+                {
+                    "id": "3",
+                    "label": {
+                        "en": "3"
+                    }
+                },
+                {
+                    "id": "4",
+                    "label": {
+                        "en": "4"
+                    }
+                }
+            ]
+        }
+    ]
+}
