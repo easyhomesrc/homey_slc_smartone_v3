@@ -1,9 +1,9 @@
 {
     "title": {
-        "en": "Off (Key held down)"
+        "en": "Off button is long pressed"  
     },
     "titleFormatted": {
-        "en": "Group [[group]] off (Key held down)"
+        "en": "Off button group [[group]] is long pressed"
     },
     "args": [
         {

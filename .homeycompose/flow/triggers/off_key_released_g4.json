@@ -1,9 +1,9 @@
 {
     "title": {
-        "en": "Off (Key released)"
+        "en": "Off button is released"
     },
     "titleFormatted": {
-        "en": "Group [[group]] off (Key released)"
+        "en": "Off button group [[group]] is released"
     },
     "args": [
         {

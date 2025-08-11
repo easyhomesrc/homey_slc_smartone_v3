@@ -48,10 +48,10 @@
     "triggers": [
       {
         "title": {
-          "en": "Off (Key held down)"
+          "en": "Off button is long pressed"
         },
         "titleFormatted": {
-          "en": "Group [[group]] off (Key held down)"
+          "en": "Off button group [[group]] is long pressed"
         },
         "args": [
           {
@@ -97,10 +97,10 @@
       },
       {
         "title": {
-          "en": "Off (Key released)"
+          "en": "Off button is released"
         },
         "titleFormatted": {
-          "en": "Group [[group]] off (Key released)"
+          "en": "Off button group [[group]] is released"
         },
         "args": [
           {
@@ -146,10 +146,10 @@
       },
       {
         "title": {
-          "en": "On (Key held down)"
+          "en": "On button is long pressed"
         },
         "titleFormatted": {
-          "en": "Group [[group]] on (Key held down)"
+          "en": "On button group [[group]] is long pressed"
         },
         "args": [
           {
@@ -195,10 +195,10 @@
       },
       {
         "title": {
-          "en": "On (Key released)"
+          "en": "On button is released"
         },
         "titleFormatted": {
-          "en": "Group [[group]] on (Key released)"
+          "en": "On button group [[group]] is released"
         },
         "args": [
           {
